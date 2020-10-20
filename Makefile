@@ -1,8 +1,8 @@
 
-all: strimzi.yaml namespace.yaml
+all: namespace.yaml quickinstall.yaml
 
-strimzi.yaml:
-	curl --fail strimzi.yaml -o https://strimzi.io/install/latest?namespace=kafka
+quickinstall.yaml:
+	curl --fail -o quickinstall.yaml https://strimzi.io/install/latest?namespace=lab-kafka
 
 namespace.yaml:
-	kubectl create ns kafka --dry-run=client -o yaml > namespace.yaml
+	kubectl create ns lab-kafka --dry-run=client -o yaml > namespace.yaml

@@ -7409,11 +7409,11 @@ metadata:
   name: strimzi-cluster-operator-entity-operator-delegation
   labels:
     app: strimzi
-  namespace: kafka
+  namespace: lab-kafka
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: kafka
+    namespace: lab-kafka
 roleRef:
   kind: ClusterRole
   name: strimzi-entity-operator
@@ -7429,7 +7429,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: kafka
+    namespace: lab-kafka
 roleRef:
   kind: ClusterRole
   name: strimzi-cluster-operator-global
@@ -7442,11 +7442,11 @@ metadata:
   name: strimzi-cluster-operator-topic-operator-delegation
   labels:
     app: strimzi
-  namespace: kafka
+  namespace: lab-kafka
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: kafka
+    namespace: lab-kafka
 roleRef:
   kind: ClusterRole
   name: strimzi-topic-operator
@@ -9378,7 +9378,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: kafka
+    namespace: lab-kafka
 roleRef:
   kind: ClusterRole
   name: strimzi-kafka-broker
@@ -9391,11 +9391,11 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: kafka
+  namespace: lab-kafka
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: kafka
+    namespace: lab-kafka
 roleRef:
   kind: ClusterRole
   name: strimzi-cluster-operator-namespaced
@@ -9639,7 +9639,7 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: kafka
+  namespace: lab-kafka
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -10763,7 +10763,7 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: kafka
+  namespace: lab-kafka
 spec:
   replicas: 1
   selector:
